@@ -10,8 +10,4 @@
 
 @interface XYZViewController : UIViewController
 
-@property (nonatomic) float scaleFactor;
-@property (nonatomic) float angle;
-@property (strong, nonatomic) UIView *boxView;
-
 @end
