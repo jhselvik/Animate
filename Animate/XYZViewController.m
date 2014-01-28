@@ -41,35 +41,32 @@
 }
 
 -(void)animateBar1 {
+    CGRect newFrame = self.stripe2.frame;
+    newFrame.origin.x = 0;
+    self.stripe2.frame = newFrame;
+    
     [UIView animateWithDuration:2.0
                           delay:0.0
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
-                         _stripe2.transform = CGAffineTransformMakeTranslation(self.translateDistance, 0.0);
+                         _stripe1.transform = CGAffineTransformMakeTranslation(self.translateDistance, 0.0);
                      } completion:^(BOOL finished) {
-
-                         
-                         CGRect newFrame = self.stripe2.frame;
-                         newFrame.origin.x = 140;
-                         self.stripe2.frame = newFrame;
-                         
                          [self animateBar2];
                      }
      ];
 }
 
 -(void)animateBar2 {
+    CGRect newFrame = self.stripe1.frame;
+    newFrame.origin.x = 0;
+    self.stripe1.frame = newFrame;
+    
     [UIView animateWithDuration:2.0
                           delay:0.0
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          _stripe2.transform = CGAffineTransformMakeTranslation(self.translateDistance, 0.0);
                      } completion:^(BOOL finished) {
-                         
-                         CGRect newFrame = self.stripe1.frame;
-                         newFrame.origin.x = 140;
-                         self.stripe1.frame = newFrame;
-                         
                          [self animateBar1];
                      }
      ];
