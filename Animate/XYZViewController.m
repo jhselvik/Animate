@@ -9,7 +9,9 @@
 #import "XYZViewController.h"
 
 @interface XYZViewController ()
-@property (weak, nonatomic) IBOutlet UIView *sendMessageView;
+@property (weak, nonatomic) IBOutlet UIView *stripe1;
+@property (weak, nonatomic) IBOutlet UIView *stripe2;
+@property CGFloat translateDistance;
 
 @end
 
@@ -20,7 +22,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-
+    _translateDistance = 280;
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,18 +33,73 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-
+//    while (1) {
+//        [self animateBar];
+//    }
     
-    [UIView animateWithDuration:1.0
-                          delay:0.0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         
-                         _sendMessageView.transform = CGAffineTransformMakeTranslation(0.0, -200.0);
-                         
-
-                     } completion:nil];
+    [self animateBar1];
 }
 
+-(void)animateBar1 {
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         _stripe2.transform = CGAffineTransformMakeTranslation(self.translateDistance, 0.0);
+                     } completion:^(BOOL finished) {
+
+                         
+                         CGRect newFrame = self.stripe2.frame;
+                         newFrame.origin.x = 140;
+                         self.stripe2.frame = newFrame;
+                         
+                         [self animateBar2];
+                     }
+     ];
+}
+
+-(void)animateBar2 {
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         _stripe2.transform = CGAffineTransformMakeTranslation(self.translateDistance, 0.0);
+                     } completion:^(BOOL finished) {
+                         
+                         CGRect newFrame = self.stripe1.frame;
+                         newFrame.origin.x = 140;
+                         self.stripe1.frame = newFrame;
+                         
+                         [self animateBar1];
+                     }
+     ];
+}
+
+
+
+//-(void)animateWin {
+//    CGRect temp  = CGRectMake(0,(self.view.frame.size.height/2 -_winImageView.frame.size.height/2), _winImageView.frame.size.width, _winImageView.frame.size.height);
+//    _winImageView.frame = temp;
+//    [UIView animateWithDuration:0.5
+//                          delay:0.0
+//                        options:UIViewAnimationOptionBeginFromCurrentState
+//                     animations:^{
+//                         _winImageView.frame = CGRectMake((self.view.frame.size.width - _winImageView.frame.size.width), _winImageView.frame.origin.y, _winImageView.frame.size.width , _winImageView.frame.size.height);
+//                     }
+//                     completion:^(BOOL finished) {
+//                         [UIView animateWithDuration:0.5
+//                                               delay:0.0
+//                                             options:UIViewAnimationOptionBeginFromCurrentState
+//                                          animations:^{
+//                                              _winImageView.frame = CGRectMake(0, _winImageView.frame.origin.y, _winImageView.frame.size.width , _winImageView.frame.size.height);
+//                                          }
+//                                          completion:^(BOOL finished) {
+//                                              [self animateWin];
+//                                          }
+//                          ];
+//                         //temp.origin.x = 0;
+//                     }
+//     ];
+//}
 
 @end

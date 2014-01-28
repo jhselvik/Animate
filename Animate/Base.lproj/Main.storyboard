@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MBi-VU-ZWM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Progress?-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="XYZViewController" sceneMemberID="viewController">
@@ -16,55 +16,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-Ix-wic">
-                                <rect key="frame" x="0.0" y="498" width="320" height="70"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripe1" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-nZ-jlA">
+                                <rect key="frame" x="0.0" y="72" width="320" height="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkY-Ka-zUe">
-                                        <rect key="frame" x="254" y="20" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lux-pW-yn3">
-                                        <rect key="frame" x="20" y="20" width="226" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="226" id="S4j-br-pFE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.27681228369999999" green="0.66089928669999998" blue="0.3561924299" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="OkY-Ka-zUe" firstAttribute="leading" secondItem="Lux-pW-yn3" secondAttribute="trailing" constant="8" symbolic="YES" id="1pC-wl-fyl"/>
-                                    <constraint firstItem="Lux-pW-yn3" firstAttribute="top" secondItem="aqY-Ix-wic" secondAttribute="top" constant="20" symbolic="YES" id="AIU-KL-O8w"/>
-                                    <constraint firstAttribute="height" constant="70" id="dpt-ng-mXY"/>
-                                    <constraint firstAttribute="bottom" secondItem="OkY-Ka-zUe" secondAttribute="bottom" constant="20" symbolic="YES" id="mvm-P9-I1c"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lux-pW-yn3" secondAttribute="bottom" constant="20" symbolic="YES" id="n0U-2J-WMk"/>
-                                    <constraint firstItem="OkY-Ka-zUe" firstAttribute="top" secondItem="aqY-Ix-wic" secondAttribute="top" constant="20" symbolic="YES" id="nBe-Cs-w1k"/>
-                                    <constraint firstItem="Lux-pW-yn3" firstAttribute="leading" secondItem="aqY-Ix-wic" secondAttribute="leading" constant="20" symbolic="YES" id="uQo-xv-Jsq"/>
-                                    <constraint firstItem="OkY-Ka-zUe" firstAttribute="leading" secondItem="Lux-pW-yn3" secondAttribute="trailing" constant="8" symbolic="YES" id="vSX-De-LqB"/>
+                                    <constraint firstAttribute="height" constant="2" id="xlN-BC-U9i"/>
                                 </constraints>
-                            </view>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripe2" translatesAutoresizingMaskIntoConstraints="NO" id="kQ1-NR-LFh">
+                                <rect key="frame" x="0.0" y="82" width="320" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="HG7-OF-5Rp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aqY-Ix-wic" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PCv-NH-WTx"/>
-                            <constraint firstAttribute="trailing" secondItem="aqY-Ix-wic" secondAttribute="trailing" id="d6k-Da-gVa"/>
-                            <constraint firstItem="xWL-p5-KiW" firstAttribute="top" secondItem="aqY-Ix-wic" secondAttribute="bottom" id="zRI-dN-Shg"/>
+                            <constraint firstAttribute="trailing" secondItem="kQ1-NR-LFh" secondAttribute="trailing" id="5KE-gh-pzD"/>
+                            <constraint firstItem="kQ1-NR-LFh" firstAttribute="top" secondItem="J7Y-nZ-jlA" secondAttribute="bottom" constant="8" symbolic="YES" id="Cb7-GK-ZrS"/>
+                            <constraint firstItem="kQ1-NR-LFh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="QU6-VS-8Ip"/>
+                            <constraint firstAttribute="trailing" secondItem="J7Y-nZ-jlA" secondAttribute="trailing" id="hQ0-dr-5st"/>
+                            <constraint firstItem="J7Y-nZ-jlA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="oAF-Pt-j8E"/>
+                            <constraint firstItem="J7Y-nZ-jlA" firstAttribute="top" secondItem="ktb-D5-QPC" secondAttribute="bottom" constant="20" symbolic="YES" id="oJb-rh-axH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Progress?" id="B5z-FY-AyL"/>
                     <connections>
-                        <outlet property="sendMessageView" destination="aqY-Ix-wic" id="WMq-Oy-SF2"/>
+                        <outlet property="stripe1" destination="J7Y-nZ-jlA" id="zZX-y4-j1S"/>
+                        <outlet property="stripe2" destination="kQ1-NR-LFh" id="G5L-yd-24b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="388" y="271"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3oS-Gy-hPl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MBi-VU-ZWM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lZH-3u-WCX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="agp-B6-WDW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0y7-Oz-mTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="271"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stripe1" width="100" height="16"/>
+        <image name="stripe2" width="100" height="16"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
