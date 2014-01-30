@@ -10,6 +10,4 @@
 
 @interface XYZViewController : UIViewController
 
-@property (strong, nonatomic) UIView *boxView;
-
 @end
